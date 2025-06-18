@@ -1,0 +1,150 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #121212;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1c1c1c;
+  padding: 10px 20px;
+}
+/* Profile Logo Wrapper */
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Profile Logo */
+.logo {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}s
+
+/* Turn green when checkbox is checked */
+#toggleProfile:checked + .logo {
+  background-color: #1db954;
+  color: white;
+}
+
+/* Dropdown Menu */
+.profile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+ 
+  width: 180px;
+  background-color: #282828;
+  border-radius: 10px;
+  box-shadow: 100 8px 16px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+/* Show menu when checkbox is checked */
+#toggleProfile:checked ~ .profile-menu {
+  display: block;
+}
+
+.profile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-menu ul li {
+  padding: 12px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.profile-menu ul li:hover {
+  background-color: #383838;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #444;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabs .tab {
+  text-decoration: none;
+  color: #aaa;
+  margin-left: 15px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #2a2a2a;
+}
+
+.tab.active {
+  background: #1db954;
+  color: #fff;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.card {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.mix-section, .artist-section {
+  padding: 20px;
+}
+
+.mix-row, .artist-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.mix-card, .artist-card {
+  background: #333;
+  padding: 10px;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.img-box {
+  height: 100px;
+  background: #555;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+footer.player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
